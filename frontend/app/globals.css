@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* ============================
+   TabOrder — High-Contrast Outdoor Theme
+   Mobile-first, bright-environment optimised
+   ============================ */
+
+:root {
+  --page-bg: #fffaf0;
+  --page-ink: #0c0a09;
+  --page-muted: #44403c;
+  --page-line: #d6d3d1;
+  --panel-bg: rgba(255, 255, 255, 0.94);
+  --panel-shadow: 0 8px 32px rgba(12, 10, 9, 0.10);
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-strong: #9a3412;
+  --success: #15803d;
+  --success-bg: #dcfce7;
+  --danger: #b91c1c;
+  --danger-bg: #fee2e2;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--page-bg); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(251, 191, 36, 0.15), transparent 40%),
+    radial-gradient(ellipse at 100% 0%, rgba(234, 88, 12, 0.10), transparent 35%),
+    linear-gradient(to bottom, #fffcf5, #fff7ed);
+  color: var(--page-ink);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+button, input, textarea { font: inherit; }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--page-line); border-radius: 3px; }
+
+/* ---- Layout Shell ---- */
+.app-shell { min-height: 100dvh; }
+
+/* ---- Surface Cards ---- */
+.surface-card {
+  border: 1px solid var(--page-line);
+  background: var(--panel-bg);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.surface-pill {
+  border: 1px solid rgba(12, 10, 9, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  border: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+.btn-primary:hover:not(:disabled) { opacity: 0.92; }
+.btn-primary:active:not(:disabled) { transform: scale(0.97); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-counter {
+  border: 1.5px solid var(--page-line);
+  background: white;
+  color: var(--page-ink);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.btn-counter:hover:not(:disabled) { background: #fef3c7; border-color: var(--accent); }
+.btn-counter:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ---- Banners ---- */
+.banner-success {
+  border: 1.5px solid rgba(21, 128, 61, 0.25);
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.banner-error {
+  border: 1.5px solid rgba(185, 28, 28, 0.25);
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ---- Locked State ---- */
+.locked-state {
+  pointer-events: none;
+  opacity: 0.55;
+  filter: grayscale(0.3);
+}
+
+/* ---- Animations ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out both;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in {
+  animation: slideInRight 0.25s ease-out both;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse-gentle {
+  animation: pulse-gentle 1.8s ease-in-out infinite;
+}
+
+@keyframes checkmark-pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-checkmark {
+  animation: checkmark-pop 0.4s ease-out both;
+}
