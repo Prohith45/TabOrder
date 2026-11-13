@@ -17,13 +17,17 @@ TabOrder is a complete, full-stack digital ordering ecosystem designed for moder
 * **⚙️ Admin Dashboard:** Complete control center for table management, dynamic menu CRUD operations, and live order tracking.
 * **🔒 Session Security:** Table locking mechanisms to prevent cross-table order spamming.
 
-## 📸 System Previews
+## 🎬 Product Showcase Video
 
-*(Replace these placeholder links with actual screenshots of your app once uploaded to a folder named `docs` or `assets` in your repo)*
+![TabOrder Launch Preview](docs/taborder-preview.gif)
+
+> 🎥 *Full launch video with audio is available in [`docs/taborder-launch.mp4`](docs/taborder-launch.mp4).*
+
+## 📸 System Previews
 
 | Customer Ordering UI | Admin Dashboard | KDS (Kitchen Display) |
 | :---: | :---: | :---: |
-| ![Customer UI](https://via.placeholder.com/300x500.png?text=Customer+UI) | ![Admin Dashboard](https://via.placeholder.com/400x250.png?text=Admin+Dashboard) | ![KDS](https://via.placeholder.com/400x250.png?text=KDS+Screen) |
+| ![Customer UI](docs/customer-ui.png) | ![Admin Dashboard](docs/admin-dashboard.png) | ![KDS](docs/kds-screen.png) |
 
 ## 🛠️ Tech Stack
 

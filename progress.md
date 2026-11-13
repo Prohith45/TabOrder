@@ -588,3 +588,34 @@
 ### Validation completed
 - GitHub API confirmed repository creation: `https://github.com/Prohith45/TabOrder`.
 - Verified commit reflection on branch `main` via `list_commits`.
+
+
+## 2026-11-13 - Real Pipeline Execution, UI Screenshots & /brag Showcase Delivery
+
+### Scope followed
+- Reinstalled all deleted `node_modules` across root backend and Next.js frontend.
+- Generated Prisma Client and started backend and frontend pipelines.
+- Captured authentic, full-resolution system screenshots for Customer Ordering UI, Admin Control Console, and Kitchen Display System (KDS).
+- Executed the `/brag` workflow: crafted brag plan, composition brief, rendered a polished 16-second product video with soundtrack (`brag.mp4`), and converted it into an animated scroll-playing preview GIF (`taborder-preview.gif`).
+- Updated [README.md](file:///C:/Users/papan/downloads/taborder/README.md) to embed the live preview GIF, link to the launch video, and replaced all placeholder links with real screenshots.
+- Synced all newly generated assets and documentation to the remote GitHub repository.
+
+### Implementation completed
+- Installed root and frontend dependencies: `npm install` and `prisma generate`.
+- Booted local Express API on port 4000 and Next.js frontend dev server on port 3000.
+- Executed `scripts/capture_screenshots.js` using headless browser to generate:
+  - `docs/customer-ui.png` (Mobile diner interface with 2-hour table session lock and digital receipt).
+  - `docs/admin-dashboard.png` (Real-time live table grid, settlement workflow, and menu manager).
+  - `docs/kds-screen.png` (Real-time kitchen display with color-coded wait timers and allergy callouts).
+- Executed `scripts/generate_brag_video.js` following the `/brag` launch specification:
+  - Created `brag-output/brag-plan.md` and `brag-output/composition-brief.md`.
+  - Composed video scenes with high-contrast typography, product highlights, and soundtrack.
+  - Rendered `brag-output/brag.mp4` and `docs/taborder-launch.mp4`.
+  - Rendered `docs/taborder-preview.gif` (900px wide, 12fps, optimized color palette) for instant autoplay in GitHub README upon scrolling.
+  - Wrote `brag-output/share-copy.txt`.
+- Updated [README.md](file:///C:/Users/papan/downloads/taborder/README.md) to showcase the autoplay GIF and real screenshots.
+
+### Validation completed
+- Confirmed all screenshots render properly and match real system states.
+- Confirmed `taborder-preview.gif` and `taborder-launch.mp4` play smoothly.
+- Confirmed git commit and push cleanly update the remote GitHub repository.
