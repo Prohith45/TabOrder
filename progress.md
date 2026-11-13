@@ -619,3 +619,20 @@
 - Confirmed all screenshots render properly and match real system states.
 - Confirmed `taborder-preview.gif` and `taborder-launch.mp4` play smoothly.
 - Confirmed git commit and push cleanly update the remote GitHub repository.
+
+
+## 2026-11-14 - Project Workspace Cleanup
+
+### Scope followed
+- Cleaned the local workspace by removing bulky dependencies, build artifacts, logs, and cache folders.
+- Preserved environment files (`.env`, `.env.local`) and Git-tracked source code.
+
+### Actions completed
+- Deleted `node_modules/` from root backend and `frontend/node_modules/`.
+- Deleted Next.js build cache (`frontend/.next/`).
+- Deleted temporary npm caches (`.npm-cache/` and `frontend/.npm-cache/`).
+- Removed local terminal log outputs (`backend.out.log`, `frontend.out.log`).
+
+### Validation completed
+- Confirmed working directory is pristine and lightweight.
+- Verified `git status` reports working tree clean and up to date with `origin/main`.
